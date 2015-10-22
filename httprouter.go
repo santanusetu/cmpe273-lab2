@@ -29,7 +29,7 @@ func helloPost(rw http.ResponseWriter, req *http.Request, p httprouter.Params) {
 		panic("Error while decoding JSON ...")
 	}
 	
-	postResponse := Response{Greeting: "Hello, " + request.Name + " !"}
+	postResponse := Response{Greeting: "Hello, " + request.Name + "!"}
 	json.NewEncoder(rw).Encode(postResponse)
     
 }
